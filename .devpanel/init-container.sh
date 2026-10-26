@@ -58,4 +58,4 @@ drush cache:warm &> /dev/null || :
 #== Fix ownership for strict permissions.
 echo
 echo 'Fix ownership for strict permissions.'
-sudo chown -R ${APACHE_RUN_USER:=www-data} web/sites/default/files private config/sync
+sudo chown -R ${APACHE_RUN_USER:=www-data}:${APACHE_RUN_GROUP:=www-data} ../build/web/sites/default/files ../build/private ../build/config/sync
